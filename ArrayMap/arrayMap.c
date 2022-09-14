@@ -3,10 +3,11 @@
 void almostMap(int *domain, int count);
 void show_array(int *array, int count);
 
+
 int main(void)
 {
   // pueden revisar archivos para mas test_cases :)
-  int target_1[] = {1,2,3,4,5,6};
+  int target_1[] = {1,2,3,4,5,6}; // {1, 4, 9, 25, 36}
   almostMap(target_1, 6);
 
   // esperamos que imprima 1 4 9 16 25 36
@@ -15,6 +16,9 @@ int main(void)
 
 void almostMap(int *domain, int count)
 {
+    for (int i = 0; i < count; ++i) {
+        *(domain + i) = *(domain + i) * *(domain + i);
+    }
 }
 
 void show_array(int *array, int count)
