@@ -16,4 +16,12 @@ int main(void)
 int almostFold(int *domain, int count)
 {
   // aqui su codigo
+    int start = 1;
+        for (int i = 0; i < count; ++i)
+        {
+            int temp = *(domain + i) * start;
+            start = temp;
+        }
+
+    return start;
 }
